@@ -1,0 +1,74 @@
+<div class="grid-container recap">
+    <h2>Rekapitulasi</h2>
+    <form method="get" class="filter">
+		<select name="cari-tahun" ></select>
+		<button class="search-button" type="submit">Cari</button>
+	</form>
+
+    	<table>
+		<thead>
+			<th>Tanggal</th>
+            <th></th>
+            <th>Total Jiwa</th>
+            <th>Total Fitrah(Uang)</th>
+            <th>Total Fitrah(Beras)</th>
+            <th>Total Fidiyah(Uang)</th>
+            <th>Total Fidiyah(Beras)</th>
+            <th>Total Infaq/Shodaqoh(Uang)</th>
+            <th>Total Infaq/Shodaqoh(Beras)</th>
+            <th>Total Maal</th>
+		</thead>
+		<tbody>
+		</tbody>
+		<tfoot>
+
+		</tfoot>
+	</table>
+</div>
+
+<div class="modal-layer" id="update-proof">
+	<div class="popup-dialog">
+		<form method="post" class="upsert-form">
+			<table>
+				@* <tr>
+					<td><label for="tanggal">Tanggal</label></td>
+					<td><input name="tanggal" type="date" placeholder="Tanggal..." required></td>
+				</tr> *@
+				<tr>
+					<td><label for="bukti">Bukti</label></td>
+					<td>
+						<input type="file" name="bukti" accept="image/png, image/jpeg, image/jpg" />
+					</td>
+				</tr>
+			</table>
+			<div class="buttons">
+				<button class="blue-button" id="edit" type="submit">Simpan</button>
+				<a class="blue-button" id="close">Tutup</a>
+			</div>
+		</form>
+	</div>
+</div>
+
+<div class="modal-layer" id="picture">
+	<div class="popup-dialog">
+		<div>
+			<img>
+		</div>
+		<div class="picture-button">
+			<a class="blue-button" id="close-picture">Tutup</a>
+		</div>
+	</div>
+</div>
+
+<div class="modal-layer" id="success">
+	<div class="popup-dialog">
+		<div>
+			<h3>Berhasil menambahkan/mengubah bukti rekapitulasi!</h3>
+		</div>
+		<div class="success-button">
+			<a class="blue-button" id="close-success">Tutup</a>
+		</div>
+	</div>
+</div>
+
+<script src="~/js/recap.js"></script>

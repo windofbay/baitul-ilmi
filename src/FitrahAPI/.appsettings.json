@@ -1,0 +1,15 @@
+{
+    "Logging": {
+      "LogLevel": {
+        "Default": "Information",
+        "Microsoft.AspNetCore": "Warning"
+      }
+    },
+    "AllowedHosts": "*",
+    "ConnectionStrings": {
+      "FitrahConnection": "Data Source = LAPTOP-26EQ94MU; Initial Catalog= Fitrah; Trusted_Connection = True; User = basilisktf; Password = basilisk; TrustServerCertificate = True"
+    },
+    "AppSettings":{
+      "Token": "Ini token yang digunakan tokentokentokentokentokentoken"
+    }
+  }

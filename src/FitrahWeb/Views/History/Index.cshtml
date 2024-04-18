@@ -1,0 +1,133 @@
+
+<div class="grid-container history">
+	<h2>Riwayat</h2>
+	<form method="get" class="filter">
+		<input name="cari-nama" placeholder="Nama...">
+        <input name="cari-alamat" placeholder="Alamat(RT/RW)...">
+		<select name="cari-tahun" ></select>
+		<button class="search-button" type="submit">Cari</button>
+	</form>
+	
+	<a class="blue-button create-button" >Tambah Riwayat Baru</a>
+	<table>
+		<thead>
+			<th></th>
+			<th>Nama</th>
+			<th>Alamat</th>
+            <th>Jumlah Jiwa</th>
+            <th>Fitrah(Uang)</th>
+            <th>Fitrah(Beras)</th>
+            <th>Fidiyah(Uang)</th>
+            <th>Fidiyah(Beras)</th>
+            <th>Infaq/Shodaqoh(Uang)</th>
+            <th>Infaq/Shodaqoh(Beras)</th>
+            <th>Maal</th>
+            <th>Tanggal</th>
+            <th>Amil</th>
+		</thead>
+		<tbody>
+		</tbody>
+		<tfoot>
+		</tfoot>
+	</table>
+</div>
+
+<div class="modal-layer" id="update">
+	<div class="popup-dialog">
+		<form method="post" class="upsert-form">
+			<table>
+				<tr>
+					<td><label for="nama">Nama</label></td>
+					<td><input name="nama" type="text" placeholder="Nama Muzakki..."required></td>
+				</tr>
+				<tr>
+					<td><label for="alamat">Alamat</label></td>
+					<td><input name="alamat" type="text" placeholder="RT/RW..." required></td>
+				</tr>
+				<tr>
+					<td><label for="jiwa">Jumlah Jiwa</label></td>
+					<td><input name="jiwa" type="number" min="1"  placeholder="Jumlah Jiwa..." required></td>
+				</tr>
+				<tr>
+					<td><label for="tanggal">Tanggal</label></td>
+					<td><input name="tanggal" type="date" placeholder="Tanggal..." required></td>
+				</tr>
+				<tr>
+					<td><label>Zakat Fitrah</label></td>
+					<td>				
+						<input name="fitrah-uang" type="text" placeholder="Uang(Rp)">
+               			<input name="fitrah-beras" type="text" placeholder="Beras (xx.xx liter)">
+					</td>
+				</tr>
+				<tr>
+					<td><label>Fidiyah</label></td>
+					<td>				
+						<input name="fidiyah-uang" type="text" placeholder="Uang(Rp)">
+						<input name="fidiyah-beras" type="text" placeholder="Beras (xx.xx liter)">
+					</td>
+				</tr>
+				<tr>
+					<td><label >Infaq/Shodaqoh</label></td>
+					<td>				
+						<input name="infaq-uang" type="text" placeholder="Uang(Rp)">
+						<input name="infaq-beras" type="text" placeholder="Beras (xx.xx liter)">
+					</td>		
+				</tr>
+				<tr>
+					<td><label for="maal">Zakat Maal</label></td>
+					<td><input name="maal" type="text" placeholder="Uang(Rp)"></td>
+				</tr>
+				<tr>
+					<td><label for="amil">Amil</label></td>
+					<td>
+						<select name="amil">
+							<option value="">Pilih Amil</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td><label for="note">Catatan</label></td>
+					<td><input name="note" type="text" placeholder="Catatan"></td>
+				</tr>
+			</table>
+			<div class="buttons">
+				<button class="blue-button" id="add" type="submit">Simpan</button>
+				<button class="blue-button" id="edit" type="submit">Simpan</button>
+				<a class="blue-button" id="close">Tutup</a>
+			</div>
+		</form>
+	</div>
+</div>
+
+<div class="modal-layer" id="success">
+	<div class="popup-dialog">
+		<div>
+			<h3>Berhasil menambahkan/mengubah riwayat!</h3>
+		</div>
+		<div class="success-button">
+			<a class="blue-button" id="close-success">Tutup</a>
+		</div>
+	</div>
+</div>
+
+<div class="modal-layer" id="delete">
+	<div class="popup-dialog">
+		<h3>Yakin mau menghapus riwayat ini?</h3>
+		<div class="delete-confirm-button">
+			<a class="blue-button" id="confirm-delete">Ya</a>
+			<a class="blue-button" id="cancel">Batal</a>
+		</div>
+	</div>
+</div>
+<div class="modal-layer" id="notes">
+	<div class="popup-dialog">
+		<p>
+			
+		</p>
+		<div class="delete-note-button">
+			<a class="blue-button" id="close-note">Tutup</a>
+		</div>
+	</div>
+</div>
+
+<script src="~/js/history.js"></script>
