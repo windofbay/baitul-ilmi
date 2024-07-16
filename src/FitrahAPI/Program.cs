@@ -21,6 +21,7 @@ public class Program
                                 .AllowAnyHeader() ;
                             });
         });
+        builder.Services.AddSwaggerGen();
         IConfiguration configuration = builder.Configuration;
         IServiceCollection services = builder.Services;
         services.AddControllers();
@@ -41,6 +42,11 @@ public class Program
         var app = builder.Build();
         
         app.UseRouting();
+        if (app.Environment.IsDevelopment())
+        {
+            app.UseSwagger();
+            app.UseSwaggerUI();
+        }
         app.UseAuthentication();
         app.UseAuthorization();
         app.UseCors(MyAllowSpecificOrigins);

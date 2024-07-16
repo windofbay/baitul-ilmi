@@ -1,0 +1,13 @@
+The Fitrah WebApp
+
+3/4/2024
+Bugs:
+- Ketika muncul pop-up Update, dropdown Amil hanya menunjukan amil1, seharusnya menunjukan sesuai
+yang dimiliki riwayat yang dipilih. (Solved)
+- Ketika selesai update, kembali ke tampilan paling awal (tampilan riwayat tahun 2024) (Solved)
+- input beras mesti pakai pemisah desimal "." bukan koma ","
+
+4/4/2024
+Lanjut ngerjain input tanggal di upsertmodal
+Bugs :
+- Input quantity masih bisa diinput kurang dari 1
