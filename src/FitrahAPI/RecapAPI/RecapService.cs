@@ -69,6 +69,7 @@ public class RecapService
     {
         List<string> validExtensions = new List<string>(){".jpg",".png",".jpeg"};
         string extension = Path.GetExtension(file.FileName);
+        //nama.jpg.pdf
         if(!validExtensions.Contains(extension)){
             return null;
             // return $"Extension is not valid ({string.Join(',',validExtensions)})";

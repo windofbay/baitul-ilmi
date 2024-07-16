@@ -37,6 +37,7 @@ public class RecapController : ControllerBase
         var result = _service.Upload(dto);
         return Ok(result);
     }
+    
     [HttpGet("image/{fileName}")]
     public IActionResult GetImage(string fileName)
     {
