@@ -22,7 +22,7 @@ public class HistoryController : ControllerBase
             string currentYear;
             if (name==null && address==null && period==null){
                 currentYear = DateTime.Now.Year.ToString();
-                var dto = _service.Get(page,pageSize,name,address,currentYear);
+                var dto = _service.Get(page,pageSize,name??"",address??"",currentYear);
                 return Ok(new ResponseDTO<HistoryIndexDto>(){
                     Message = ConstantConfigs.MESSAGE_GET("Riwayat"),
                     Status = ConstantConfigs.STATUS_OK,
@@ -30,7 +30,7 @@ public class HistoryController : ControllerBase
                 });
             } 
             else {
-                var dto = _service.Get(page,pageSize,name,address,period);
+                var dto = _service.Get(page,pageSize,name??"",address??"",period??"");
                 return Ok(new ResponseDTO<HistoryIndexDto>(){
                     Message = ConstantConfigs.MESSAGE_GET("Riwayat"),
                     Status = ConstantConfigs.STATUS_OK,
