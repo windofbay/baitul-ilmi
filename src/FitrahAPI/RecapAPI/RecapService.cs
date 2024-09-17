@@ -57,7 +57,7 @@ public class RecapService
     public string Upload(RecapUpsertDto dto)
     { 
         var model = _recapRepository.Get(dto.Date);
-        model.Image = AddImage(dto.Image);
+        model.Image = AddImage(dto.Image!);
         if (model.Image==null){
             return "Extension is not valid, please reupload with .jpg/.jpeg/.png file";
         } else{
@@ -71,8 +71,8 @@ public class RecapService
         string extension = Path.GetExtension(file.FileName);
         //nama.jpg.pdf
         if(!validExtensions.Contains(extension)){
-            return null;
-            // return $"Extension is not valid ({string.Join(',',validExtensions)})";
+            //return null;
+            return $"Extension is not valid ({string.Join(',',validExtensions)})";
         };
         // long size = file.Length;
         // if(size > (5*10000*10000)) return "Maximum size can be 10mb";

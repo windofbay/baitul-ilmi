@@ -117,7 +117,7 @@ public class HistoryService
     }
     public HistoryUpsertDto Update(HistoryUpsertDto dto)
     {
-        var model = _historyRepository.Get(dto.Code);
+        var model = _historyRepository.Get(dto.Code!);
         model.MuzakkiName = dto.MuzakkiName;
         model.Quantity = dto.Quantity;
         model.Address = dto.Address;

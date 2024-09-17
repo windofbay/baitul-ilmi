@@ -12,11 +12,9 @@ public class HistoryController : ControllerBase
         _service = service;
     }
 
-    [HttpGet("histories")]
+    [HttpGet]
     public IActionResult Get(string? name,string? address, string? period,int page=1, int pageSize=10)
     {
-        //GATAU KENAPA ITU KLO PARAMETERNYA PAKE "year" value-nya jadi NULL
-        //terus, JADI GW GANTI PAKE "period"
         try
         {
             string currentYear;

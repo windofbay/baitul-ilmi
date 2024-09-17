@@ -4,7 +4,7 @@ namespace FitrahAPI.HistoryAPI;
 
 public class HistoryUpsertDto
 {
-    public string Code { get; set; }
+    public string? Code { get; set; } 
     public string MuzakkiName { get; set; } = null!;
     public string Address { get; set; } = null!;
     public int? Quantity { get; set; }
@@ -18,6 +18,6 @@ public class HistoryUpsertDto
     public decimal? MaalRice { get; set; }
     public string AmilUsername { get; set; } = null!;
     public string? Note { get; set; }
-    public List<SelectListItem> Amils { get; set; }
+    public List<SelectListItem> Amils { get; set; } = new List<SelectListItem>();
     public DateTime Date { get; set; } 
 }

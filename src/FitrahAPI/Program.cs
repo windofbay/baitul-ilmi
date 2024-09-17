@@ -1,4 +1,5 @@
 using System.Text;
+using FitrahAPI.HistoryAPI;
 using FitrahDataAccess;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
@@ -26,10 +27,12 @@ public class Program
         IServiceCollection services = builder.Services;
         services.AddControllers();
         services.AddBusinessService();
+        services.AddAutoMapper(
+            typeof(HistoryProfile)
+        );
         services.AddSwaggerGen(
             options => {
                 options.SwaggerDoc("v1", new Microsoft.OpenApi.Models.OpenApiInfo { Title = "FitrahAPI", Version = "v1" });
-                
             }
         );
         Dependencies.ConfigureService(configuration,services);
