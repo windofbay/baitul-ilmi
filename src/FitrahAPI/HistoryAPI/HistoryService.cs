@@ -18,7 +18,7 @@ public class HistoryService
         _recapRepository = recapRepository;
     }
 
-    public HistoryIndexDto Get(int page, int pageSize, string? name, string? address, string? year)
+    public HistoryIndexDto Get(int page, int pageSize, string name, string address, string year)
     {
         var model = _historyRepository.Get(page,pageSize,name,address,year)
         .Select(history=>new HistoryDto(){

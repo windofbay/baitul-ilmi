@@ -14,29 +14,78 @@ public class RecapController : ControllerBase
     [HttpGet]
     public IActionResult Get(string? period="")
     {
-        string currentYear;
-        if (period==null){
-            currentYear = DateTime.Now.Year.ToString();
-            var dto = _service.Get(currentYear);
-            return Ok(dto);
-        } 
-        else {
-            var dto = _service.Get(period);
-            return Ok(dto);
+        try
+        {
+            string currentYear;
+            if (period==null){
+                currentYear = DateTime.Now.Year.ToString();
+                var dto = _service.Get(currentYear);
+                return Ok(new ResponseDTO<RecapIndexDto>(){
+                    Message = ConstantConfigs.MESSAGE_GET("Rekap"),
+                    Status = ConstantConfigs.STATUS_OK,
+                    Data = dto,
+                });
+            } 
+            else {
+                var dto = _service.Get(period);
+                return Ok(new ResponseDTO<RecapIndexDto>(){
+                    Message = ConstantConfigs.MESSAGE_GET("Rekap"),
+                    Status = ConstantConfigs.STATUS_OK,
+                    Data = dto,
+                });
+            }      
         }
+        catch (System.Exception)
+        {
+            return BadRequest(new ResponseDTO<string>(){
+                Message = ConstantConfigs.MESSAGE_FAILED,
+                Status = ConstantConfigs.STATUS_FAILED,
+            });
+        }
+
     }
     [HttpGet("{date}")]
     public IActionResult Get(DateTime date)
     {
-        var dto = _service.Get(date);
-        return Ok(dto);
+        try
+        {
+            var dto = _service.Get(date);
+            return Ok(new ResponseDTO<RecapUpsertDto>(){
+                Message = ConstantConfigs.MESSAGE_GET("Rekap"),
+                Status = ConstantConfigs.STATUS_OK,
+                Data = dto,
+            });
+        }
+        catch (System.Exception)
+        {
+            return BadRequest(new ResponseDTO<string>(){
+                Message = ConstantConfigs.MESSAGE_FAILED,
+                Status = ConstantConfigs.STATUS_FAILED,
+            });
+        }
+
     }
     [HttpPatch("{date}")]
     public IActionResult Upload([FromForm] RecapUpsertDto dto)
     {
-        var result = _service.Upload(dto);
-        return Ok(result);
+        try
+        {
+            var result = _service.Upload(dto);
+            return Ok(new ResponseDTO<string>(){
+                Message = ConstantConfigs.MESSAGE_PUT(result),
+                Status = ConstantConfigs.STATUS_OK
+            });
+        }
+        catch (System.Exception)
+        {
+            return BadRequest(new ResponseDTO<string>(){
+                Message = ConstantConfigs.MESSAGE_FAILED,
+                Status = ConstantConfigs.STATUS_FAILED,
+            });
+        }
+
     }
+    
     [HttpGet("image/{fileName}")]
     public IActionResult GetImage(string fileName)
     {

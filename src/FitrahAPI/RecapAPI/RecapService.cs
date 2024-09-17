@@ -15,7 +15,7 @@ public class RecapService
         _recapRepository = recapRepository;
     }
 
-    public RecapIndexDto Get(string? year)
+    public RecapIndexDto Get(string year)
     {
         var model = _historyRepository.GetByYear(year)
         .GroupBy(h=>h.Date)
@@ -36,7 +36,7 @@ public class RecapService
             Recaps = model.ToList(),
             Year = year??"",
             Years = GetYears(),
-            OverallRecap = GetOverallTotal(year)
+            OverallRecap = GetOverallTotal(year??"")
         };
     }
     public RecapUpsertDto GetRecap(DateTime date)
@@ -69,6 +69,7 @@ public class RecapService
     {
         List<string> validExtensions = new List<string>(){".jpg",".png",".jpeg"};
         string extension = Path.GetExtension(file.FileName);
+        //nama.jpg.pdf
         if(!validExtensions.Contains(extension)){
             return null;
             // return $"Extension is not valid ({string.Join(',',validExtensions)})";
@@ -95,7 +96,7 @@ public class RecapService
         .ToList();
         return years;
     }
-    private OverallRecapDto GetOverallTotal(string? year)
+    private OverallRecapDto GetOverallTotal(string year)
     {
         var histories = _historyRepository.GetByYear(year);
         var result = from history in histories
