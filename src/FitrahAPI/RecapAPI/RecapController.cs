@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 
 namespace FitrahAPI.RecapAPI;
-[Route("api/recap")]
+[Route("api/[controller]")]
 [ApiController]
 public class RecapController : ControllerBase
 {

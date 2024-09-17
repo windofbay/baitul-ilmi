@@ -1,0 +1,79 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\1950\\Documents\\Fitrah\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{58266F16-A2B5-428B-97AE-42D7E1924FFC}|src\\FitrahAPI\\FitrahAPI.csproj|c:\\users\\1950\\documents\\fitrah\\src\\fitrahapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{58266F16-A2B5-428B-97AE-42D7E1924FFC}|src\\FitrahAPI\\FitrahAPI.csproj|solutionrelative:src\\fitrahapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58266F16-A2B5-428B-97AE-42D7E1924FFC}|src\\FitrahAPI\\FitrahAPI.csproj|c:\\users\\1950\\documents\\fitrah\\src\\fitrahapi\\fitrahapi.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{58266F16-A2B5-428B-97AE-42D7E1924FFC}|src\\FitrahAPI\\FitrahAPI.csproj|solutionrelative:src\\fitrahapi\\fitrahapi.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A00AF1F9-B981-41FD-9761-8C0402349A55}|src\\FitrahWeb\\FitrahWeb.csproj|c:\\users\\1950\\documents\\fitrah\\src\\fitrahweb\\wwwroot\\js\\history.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A00AF1F9-B981-41FD-9761-8C0402349A55}|src\\FitrahWeb\\FitrahWeb.csproj|solutionrelative:src\\fitrahweb\\wwwroot\\js\\history.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\1950\\Documents\\Fitrah\\src\\FitrahAPI\\Program.cs",
+              "RelativeDocumentMoniker": "src\\FitrahAPI\\Program.cs",
+              "ToolTip": "C:\\Users\\1950\\Documents\\Fitrah\\src\\FitrahAPI\\Program.cs",
+              "RelativeToolTip": "src\\FitrahAPI\\Program.cs",
+              "ViewState": "AQIAABAAAAAAAAAAAAAgwDcAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-15T02:17:57.945Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "FitrahAPI.csproj",
+              "DocumentMoniker": "C:\\Users\\1950\\Documents\\Fitrah\\src\\FitrahAPI\\FitrahAPI.csproj",
+              "RelativeDocumentMoniker": "src\\FitrahAPI\\FitrahAPI.csproj",
+              "ToolTip": "C:\\Users\\1950\\Documents\\Fitrah\\src\\FitrahAPI\\FitrahAPI.csproj",
+              "RelativeToolTip": "src\\FitrahAPI\\FitrahAPI.csproj",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABgAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-08-15T02:12:26.915Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "history.js",
+              "DocumentMoniker": "C:\\Users\\1950\\Documents\\Fitrah\\src\\FitrahWeb\\wwwroot\\js\\history.js",
+              "RelativeDocumentMoniker": "src\\FitrahWeb\\wwwroot\\js\\history.js",
+              "ToolTip": "C:\\Users\\1950\\Documents\\Fitrah\\src\\FitrahWeb\\wwwroot\\js\\history.js",
+              "RelativeToolTip": "src\\FitrahWeb\\wwwroot\\js\\history.js",
+              "ViewState": "AQIAANYAAAAAAAAAAAAgwM0AAAAaAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2024-07-30T06:32:22.626Z"
+            }
+          ]
+        },
+        {
+          "DockedWidth": 294,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

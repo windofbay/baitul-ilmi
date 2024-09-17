@@ -1,8 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 
 namespace FitrahAPI.HistoryAPI;
-[Route("api/history")]
 [ApiController]
+[Route("api/[controller]")]
 public class HistoryController : ControllerBase
 {
     private readonly HistoryService _service;
@@ -12,8 +12,8 @@ public class HistoryController : ControllerBase
         _service = service;
     }
 
-    [HttpGet]
-    public IActionResult Get(int page=1, int pageSize=10,string? name="",string? address="", string? period="")
+    [HttpGet("histories")]
+    public IActionResult Get(string? name,string? address, string? period,int page=1, int pageSize=10)
     {
         //GATAU KENAPA ITU KLO PARAMETERNYA PAKE "year" value-nya jadi NULL
         //terus, JADI GW GANTI PAKE "period"
