@@ -34,6 +34,12 @@ values ('lukman','$2a$12$MALsu8YWSchieRn6pO9q1ej2oXQwtk7obkwRx0RmdEDYCxNIuE25i')
 ('rangga','$2a$12$uXtrrONAa4BsGHFF4T81wONV7JkcxxH1v876p3AiCzesPrLfmJhsO'),
 ('bayu','$2a$12$NFae1zuwdSo7W4Xwn/hO4OIh10GTgQv2JOIpTFaI6nVKcMQeWiHia');
 
+insert into Accounts
+values ('amil2','$2a$12$HCy9CQ5QMblOxJ1/MnHMA./EXZ8d/hgjmiDkwjeTkpvqQNooatrRy')
+pw amil1 : amilZakat25
+pw amil2 : 345
+
+
 drop table Histories
 
 

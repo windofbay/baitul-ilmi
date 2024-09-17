@@ -21,10 +21,17 @@ public class Program
                                 .AllowAnyHeader() ;
                             });
         });
+        builder.Services.AddSwaggerGen();
         IConfiguration configuration = builder.Configuration;
         IServiceCollection services = builder.Services;
         services.AddControllers();
         services.AddBusinessService();
+        services.AddSwaggerGen(
+            options => {
+                options.SwaggerDoc("v1", new Microsoft.OpenApi.Models.OpenApiInfo { Title = "FitrahAPI", Version = "v1" });
+                
+            }
+        );
         Dependencies.ConfigureService(configuration,services);
 
         services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
@@ -40,7 +47,17 @@ public class Program
             });
         var app = builder.Build();
         
+        if (app.Environment.IsDevelopment())
+        {
+            app.UseSwagger();
+            app.UseSwaggerUI();
+        }
         app.UseRouting();
+        if (app.Environment.IsDevelopment())
+        {
+            app.UseSwagger();
+            app.UseSwaggerUI();
+        }
         app.UseAuthentication();
         app.UseAuthorization();
         app.UseCors(MyAllowSpecificOrigins);
